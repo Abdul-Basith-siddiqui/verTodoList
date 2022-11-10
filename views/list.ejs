@@ -4,15 +4,22 @@
     <meta charset="utf-8">
     <title></title>
   </head>
-  <body>
-    <!-- < % 'Scriptlet' tag, for control-flow, no output  and command tagis < %# > -->
-  <%  if(todayIs==="Saturday" || todayIs=="Sunday"){ %>
-     <!-- < %= Outputs the value into the template (HTML escaped) -->
-      <h1 style="color=green;">Today is :<%=todayIs%></h1>
-  <%  }else{ %>
-      <h1 style="color:red">Today is :<%=todayIs%></h1>
-  <%  } %>
+  <body style="text-align:center;">
+  <h1> <%=todayIs %> </h1>
+  
+  <ul style="list-style-type: none;">
 
+   <% for(let i=0; i<newli.length; i++){ %>
+        <li> <%=newli[i]%> </li>
+    <% } %>
+
+    </ul>
+
+      <!-- form send post request to the home route and the value send is the input of name="data" atleast in these case  -->
+    <form class="" action="/" method="post">
+      <input type="text" name="data" placeholder="write text here">
+      <button type="submit" name="button">add</button>
+    </form>
 
   </body>
 </html>
