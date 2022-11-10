@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <!-- < % 'Scriptlet' tag, for control-flow, no output  and command tagis < %# > -->
+  <%  if(todayIs==="Saturday" || todayIs=="Sunday"){ %>
+     <!-- < %= Outputs the value into the template (HTML escaped) -->
+      <h1 style="color=green;">Today is :<%=todayIs%></h1>
+  <%  }else{ %>
+      <h1 style="color:red">Today is :<%=todayIs%></h1>
+  <%  } %>
+
+
+  </body>
+</html>
