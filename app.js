@@ -1,12 +1,13 @@
 const express = require("express"); //adding modules
 const bodyParse = require("body-parser"); //adding modules
-
+//npm install ejs bhi kared
 let userInputs=["Buy the food","cook the food","eat the food"];
 const app = express();
 app.set('view engine', 'ejs'); //view engine is very popular in node // have to create "view" folder and "filename.ejs" file to use this engine
 //don't change the above line
 
 app.use(bodyParse.urlencoded({extended:true}));
+app.use(express.static("public")); // express dont add by default css or other files we have to specify , even through we have se path in html of css  we have to write this line to include the files
 
 const today = new Date();
 // const currentDay = today.getDay();
