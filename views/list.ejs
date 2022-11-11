@@ -1,15 +1,8 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-
-<head>
-  <meta charset="utf-8">
-  <link rel="stylesheet" href="css/styles.css">
-  <title></title>
-</head>
+<%- include("header"); -%>
 
 <body>
   <div class="box" id="heading">
-    <h1> <%=todayIs %> </h1>
+    <h1> <%=titlepage %> </h1>
   </div>
 
   <div class="box">
@@ -22,13 +15,9 @@
       <!-- form send post request to the home route and the value send is the input of name="data" atleast in these case  -->
       <form class="" action="/" method="post">
         <input type="text" name="data" placeholder="write text here" autocomplete="off">
-        <button type="submit" name="button">+</button>
+        <button type="submit" name="list" value= <%=titlepage %> >+</button>
       </form>
   </div>
-
-
-
-
 </body>
 
-</html>
+<%- include("footer"); -%>
